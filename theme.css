@@ -1,0 +1,224 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+    margin:0;
+    background:#f4f6fb;
+}
+
+/* ===== SIDEBAR ===== */
+.sidebar{
+    position:fixed;
+    left:0;top:0;
+    width:240px;height:100vh;
+    background:linear-gradient(180deg,#667eea,#764ba2);
+    padding:22px 18px;
+    color:#fff;
+}
+
+.sidebar h2{
+    text-align:center;
+    margin-bottom:35px;
+    font-weight:600;
+}
+
+.sidebar a{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    padding:13px 16px;
+    border-radius:14px;
+    margin-bottom:10px;
+    color:#fff;
+    text-decoration:none;
+    transition:.25s;
+}
+
+.sidebar a:hover,
+.sidebar a.active{
+    background:rgba(255,255,255,.18);
+    transform:translateX(4px);
+}
+
+/* ===== MAIN ===== */
+.main{
+    margin-left:240px;
+    padding:28px;
+}
+
+/* ===== TOPBAR ===== */
+.topbar{
+    background:#fff;
+    padding:16px 22px;
+    border-radius:16px;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    box-shadow:0 10px 20px rgba(0,0,0,.08);
+}
+
+/* ===== CARD ===== */
+.cards{
+    margin-top:25px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:#fff;
+    padding:24px;
+    border-radius:20px;
+    box-shadow:0 10px 22px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-6px) scale(1.01);
+}
+
+.card h3{
+    margin:0;
+    font-size:14px;
+    color:#777;
+}
+
+.card p{
+    margin-top:8px;
+    font-size:30px;
+    font-weight:600;
+    color:#333;
+}
+
+/* ===== CONTAINER ===== */
+.container{
+    max-width:1150px;
+    margin:30px auto;
+    background:#fff;
+    padding:28px;
+    border-radius:20px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+}
+
+/* ===== BUTTON ===== */
+.btn{
+    display:inline-flex;
+    align-items:center;
+    gap:8px;
+    padding:10px 20px;
+    border-radius:14px;
+    border:none;
+    font-size:14px;
+    font-weight:500;
+    text-decoration:none;
+    cursor:pointer;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-2px);
+    box-shadow:0 10px 22px rgba(0,0,0,.18);
+}
+
+.save,.add,.back{
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:#fff;
+}
+
+.save:hover,.add:hover,.back:hover{
+    background:linear-gradient(135deg,#764ba2,#667eea);
+}
+
+.delete{
+    background:linear-gradient(135deg,#ff4d4f,#ff6b6b);
+    color:#fff;
+}
+
+.delete:hover{
+    background:linear-gradient(135deg,#ff6b6b,#ff4d4f);
+}
+
+/* ===== FORM ===== */
+input,select{
+    width:100%;
+    padding:12px;
+    margin-bottom:14px;
+    border-radius:12px;
+    border:1px solid #ddd;
+    font-size:14px;
+}
+
+input:focus,select:focus{
+    outline:none;
+    border-color:#667eea;
+    box-shadow:0 0 0 3px rgba(102,126,234,.18);
+}
+
+/* ===== TABLE ===== */
+.table-wrap{
+    overflow:hidden;
+    border-radius:18px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    background:#fff;
+    margin-top:15px;
+}
+
+table{
+    width:100%;
+    border-collapse:separate;
+    border-spacing:0;
+}
+
+th{
+    padding:14px 14px;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+    color:#fff;
+    text-align:left;
+    font-weight:500;
+}
+
+th:first-child{border-top-left-radius:18px;}
+th:last-child{border-top-right-radius:18px;}
+
+td{
+    padding:13px 14px;
+    border-bottom:1px solid #eee;
+    color:#444;
+}
+
+tr:hover td{
+    background:linear-gradient(90deg,rgba(102,126,234,.05),rgba(118,75,162,.05));
+}
+
+td:first-child{
+    font-weight:600;
+    color:#667eea;
+}
+
+/* ===== ACTION ===== */
+.action{
+    white-space:nowrap;
+}
+
+.action .btn{
+    padding:6px 14px;
+    font-size:12px;
+    border-radius:10px;
+}
+
+/* ===== BADGE ===== */
+.badge{
+    padding:5px 12px;
+    border-radius:20px;
+    font-size:12px;
+    font-weight:500;
+    display:inline-block;
+}
+
+.badge.green{background:#22c55e;color:#fff;}
+.badge.red{background:#ef4444;color:#fff;}
+.badge.blue{background:#3b82f6;color:#fff;}
